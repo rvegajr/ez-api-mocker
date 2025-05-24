@@ -1,9 +1,26 @@
-# API Mocker
+# EZ API Mocker
 
-A comprehensive tool to automatically discover, record, and mock REST APIs and OData services from Swagger/OpenAPI specifications with real response data.
+A powerful tool for recording and mocking REST APIs with Swagger/OpenAPI specifications, featuring dynamic response generation, CORS handling, and a beautiful UI.
+
+## Purpose
+
+EZ API Mocker simplifies API development and testing by allowing developers to:
+
+- Create mock APIs based on Swagger/OpenAPI specifications
+- Record actual API responses for replay during development
+- Test applications against APIs without connecting to production endpoints
+- Explore API documentation with an integrated Swagger UI
+- Support authenticated APIs with token-based authorization
 
 ## Features
 
+- **Dynamic Swagger UI**: Interactive API documentation and testing
+- **Multi-API Support**: Host multiple APIs on a single server
+- **Response Customization**: Define custom responses for specific endpoints
+- **Fallback Responses**: Automatically generate responses when no specific file exists
+- **Authentication Support**: Handle protected APIs with token-based authentication
+- **CORS Handling**: Properly configured CORS for cross-origin requests
+- **Beautiful UI**: Modern interface with API information and endpoint listings
 - **Automatic Swagger Discovery**: Automatically finds Swagger/OpenAPI specs at common paths
 - **API Classification**: Detects API types (REST, OData, GraphQL) and authentication requirements
 - **Comprehensive Recording**: Records responses from all HTTP verbs (GET, POST, PUT, DELETE, PATCH)
@@ -18,14 +35,19 @@ A comprehensive tool to automatically discover, record, and mock REST APIs and O
 ## Installation
 
 ```bash
+# Clone the repository
+git clone https://github.com/rvegajr/ez-api-mocker.git
+
 # Navigate to the ApiMocker directory
-cd /Users/rickyvega/Dev/AlliedPilots/APAPilot/APA.PilotAdmin/_Resources/ApiMocker
+cd ez-api-mocker/ApiMocker
 
 # Install dependencies
 npm install
 ```
 
 ## Quick Start
+
+> **Note:** For a detailed step-by-step guide on creating a mock Petstore API, see the [Petstore Walkthrough](../PETSTORE_WALKTHROUGH.md).
 
 ### Record API Responses
 
