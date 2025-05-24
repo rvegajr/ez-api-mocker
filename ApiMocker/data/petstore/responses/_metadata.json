@@ -1,0 +1,169 @@
+{
+  "baseUrl": "https://petstore.swagger.io/v2/swagger.json",
+  "recordedAt": "2025-05-24T18:24:46.419Z",
+  "endpointCount": 20,
+  "successCount": 0,
+  "errorCount": 20,
+  "endpoints": [
+    {
+      "path": "/pet/{petId}/uploadImage",
+      "method": "post",
+      "operationId": "uploadFile",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/pet",
+      "method": "post",
+      "operationId": "addPet",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/pet",
+      "method": "put",
+      "operationId": "updatePet",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/pet/findByStatus",
+      "method": "get",
+      "operationId": "findPetsByStatus",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/pet/findByTags",
+      "method": "get",
+      "operationId": "findPetsByTags",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/pet/{petId}",
+      "method": "get",
+      "operationId": "getPetById",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/pet/{petId}",
+      "method": "post",
+      "operationId": "updatePetWithForm",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/pet/{petId}",
+      "method": "delete",
+      "operationId": "deletePet",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/store/inventory",
+      "method": "get",
+      "operationId": "getInventory",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/store/order",
+      "method": "post",
+      "operationId": "placeOrder",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/store/order/{orderId}",
+      "method": "get",
+      "operationId": "getOrderById",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/store/order/{orderId}",
+      "method": "delete",
+      "operationId": "deleteOrder",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/user/createWithList",
+      "method": "post",
+      "operationId": "createUsersWithListInput",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/user/{username}",
+      "method": "get",
+      "operationId": "getUserByName",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/user/{username}",
+      "method": "put",
+      "operationId": "updateUser",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/user/{username}",
+      "method": "delete",
+      "operationId": "deleteUser",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/user/login",
+      "method": "get",
+      "operationId": "loginUser",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/user/logout",
+      "method": "get",
+      "operationId": "logoutUser",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/user/createWithArray",
+      "method": "post",
+      "operationId": "createUsersWithArrayInput",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    },
+    {
+      "path": "/user",
+      "method": "post",
+      "operationId": "createUser",
+      "status": "error",
+      "error": "Request failed with status code 404",
+      "isOData": false
+    }
+  ]
+}

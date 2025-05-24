@@ -1,0 +1,8 @@
+{
+  "statusCode": 200,
+  "data": {
+    "message": "This is a default mock response",
+    "timestamp": "2025-05-24T18:01:38-05:00",
+    "endpoint": "GET request"
+  }
+}

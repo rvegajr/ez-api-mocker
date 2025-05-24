@@ -1,0 +1,7 @@
+{
+  "error": true,
+  "message": "Request failed with status code 404",
+  "path": "/user/{username}",
+  "method": "get",
+  "timestamp": "2025-05-24T18:24:47.260Z"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "petstore",
+  "type": "REST",
+  "active": true,
+  "basePath": "/api/v1",
+  "description": "Swagger Petstore API"
+}

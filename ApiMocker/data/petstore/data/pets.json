@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "name": "Fluffy",
+    "type": "cat",
+    "status": "available",
+    "tags": ["cute", "fluffy"],
+    "createdAt": "2025-05-24T10:00:00.000Z",
+    "updatedAt": "2025-05-24T10:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "name": "Rex",
+    "type": "dog",
+    "status": "available",
+    "tags": ["loyal", "friendly"],
+    "createdAt": "2025-05-24T10:05:00.000Z",
+    "updatedAt": "2025-05-24T10:05:00.000Z"
+  },
+  {
+    "id": 3,
+    "name": "Buddy",
+    "type": "dog",
+    "status": "pending",
+    "tags": ["playful", "young"],
+    "createdAt": "2025-05-24T10:10:00.000Z",
+    "updatedAt": "2025-05-24T10:10:00.000Z"
+  }
+]

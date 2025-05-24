@@ -1,0 +1,7 @@
+{
+  "apiType": "odata",
+  "isOData": true,
+  "isGraphQL": false,
+  "requiresAuth": false,
+  "authType": null
+}

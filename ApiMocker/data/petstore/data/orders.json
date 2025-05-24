@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "petId": 1,
+    "quantity": 1,
+    "shipDate": "2025-05-24T12:00:00.000Z",
+    "status": "placed",
+    "complete": false,
+    "createdAt": "2025-05-24T11:00:00.000Z",
+    "updatedAt": "2025-05-24T11:00:00.000Z"
+  },
+  {
+    "id": 2,
+    "petId": 2,
+    "quantity": 2,
+    "shipDate": "2025-05-25T12:00:00.000Z",
+    "status": "approved",
+    "complete": false,
+    "createdAt": "2025-05-24T11:15:00.000Z",
+    "updatedAt": "2025-05-24T11:15:00.000Z"
+  }
+]

@@ -1,0 +1,6 @@
+#!/usr/bin/env node
+
+// This is the main entry point for the API Mocker CLI
+// It simply forwards all arguments to the CLI module
+
+require('../src/cli');

@@ -1,0 +1,8 @@
+{
+  "statusCode": 201,
+  "data": {
+    "message": "Resource created successfully",
+    "timestamp": "2025-05-24T18:01:38-05:00",
+    "success": true
+  }
+}

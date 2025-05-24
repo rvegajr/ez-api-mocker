@@ -1,0 +1,118 @@
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.summary {
+  display: flex;
+  justify-content: space-between;
+  max-width: 500px;
+}
+
+section {
+  margin-bottom: 30px;
+}
+
+.api-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.api-table th, .api-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.api-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+}
+
+.api-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.active {
+  color: #28a745;
+}
+
+.inactive {
+  color: #dc3545;
+}
+
+.btn {
+  display: inline-block;
+  padding: 6px 12px;
+  margin-right: 5px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+.doc-links {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.doc-links li {
+  margin-bottom: 10px;
+}
+
+.doc-links a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.doc-links a:hover {
+  text-decoration: underline;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.api-stats {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  color: #6c757d;
+}
+    

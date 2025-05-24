@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Mocker Dashboard</title>
+  <link rel="stylesheet" href="/css/dashboard.css">
+</head>
+<body>
+  <header>
+    <h1>API Mocker Dashboard</h1>
+    <div class="summary">
+      <p>Total APIs: 2</p>
+      <p>Active APIs: 1</p>
+      <p>Last Updated: 5/24/2025, 5:35:14 PM</p>
+    </div>
+  </header>
+  
+  <main>
+    <section class="api-list">
+      <h2>API List</h2>
+      
+  <table class="api-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Base Path</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+    <tr class="active">
+      <td>petstore</td>
+      <td>REST</td>
+      <td>/api/v1</td>
+      <td>Active</td>
+      <td>
+        <a href="/api/v1" class="btn btn-primary">View API</a>
+        <a href="/api/v1/docs" class="btn btn-secondary">Docs</a>
+      </td>
+    </tr>
+    
+    <tr class="inactive">
+      <td>responses</td>
+      <td>undefined</td>
+      <td>/</td>
+      <td>Inactive</td>
+      <td>
+        <a href="/" class="btn btn-primary">View API</a>
+        <a href="//docs" class="btn btn-secondary">Docs</a>
+      </td>
+    </tr>
+    
+    </tbody>
+  </table>
+  
+    </section>
+    
+    <section class="documentation">
+      <h2>API Documentation</h2>
+      
+  <ul class="doc-links">
+    
+    <li>
+      <a href="/api/v1/docs">petstore Documentation</a>
+    </li>
+    
+  </ul>
+  
+    </section>
+    
+    <section class="statistics">
+      <h2>Usage Statistics</h2><p>No usage data available yet.</p>
+    </section>
+  </main>
+  
+  <footer>
+    <p>API Mocker &copy; 2025</p>
+  </footer>
+  
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
+    

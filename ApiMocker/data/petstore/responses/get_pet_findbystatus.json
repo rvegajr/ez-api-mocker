@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "name": "Fluffy",
+    "category": {
+      "id": 1,
+      "name": "Cats"
+    },
+    "photoUrls": [
+      "https://example.com/pet1.jpg"
+    ],
+    "tags": [
+      {
+        "id": 1,
+        "name": "cute"
+      },
+      {
+        "id": 2,
+        "name": "fluffy"
+      }
+    ],
+    "status": "available"
+  },
+  {
+    "id": 2,
+    "name": "Rex",
+    "category": {
+      "id": 2,
+      "name": "Dogs"
+    },
+    "photoUrls": [
+      "https://example.com/pet2.jpg"
+    ],
+    "tags": [
+      {
+        "id": 3,
+        "name": "loyal"
+      },
+      {
+        "id": 4,
+        "name": "friendly"
+      }
+    ],
+    "status": "available"
+  },
+  {
+    "id": 3,
+    "name": "Buddy",
+    "category": {
+      "id": 2,
+      "name": "Dogs"
+    },
+    "photoUrls": [
+      "https://example.com/pet3.jpg"
+    ],
+    "tags": [
+      {
+        "id": 5,
+        "name": "playful"
+      },
+      {
+        "id": 6,
+        "name": "young"
+      }
+    ],
+    "status": "pending"
+  }
+]
