@@ -1,7 +1,0 @@
-{
-  "name": "sentinel",
-  "basePath": "/api/v1",
-  "authRequired": true,
-  "authType": "bearer",
-  "isOData": false
-}
