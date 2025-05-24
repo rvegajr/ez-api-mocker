@@ -23,6 +23,44 @@ async function fetchSwagger(baseUrl, apiName = 'default', options = {}) {
   // Normalize base URL (remove trailing slash)
   const normalizedUrl = baseUrl.endsWith('/') ? baseUrl.slice(0, -1) : baseUrl;
   
+  // If a specific Swagger URL is provided in options, try that first
+  if (options.swaggerUrl) {
+    try {
+      console.log(`Trying specified Swagger URL: ${options.swaggerUrl}...`);
+      
+      const response = await axios.get(options.swaggerUrl, {
+        timeout: options.timeout || 5000,
+        headers: {
+          'Accept': 'application/json',
+          ...(options.authToken ? { 'Authorization': options.authToken } : {})
+        }
+      });
+      
+      // If we get a successful response, try to parse it as Swagger/OpenAPI
+      if (response.status === 200 && response.data) {
+        // Validate that this is actually a Swagger/OpenAPI spec
+        if (response.data.swagger || response.data.openapi) {
+          // Save the raw Swagger spec to API-specific directory
+          const apiDir = path.resolve(options.output || './data', apiName);
+          if (!fs.existsSync(apiDir)) {
+            fs.mkdirSync(apiDir, { recursive: true });
+          }
+          
+          fs.writeFileSync(
+            path.resolve(apiDir, 'swagger.json'), 
+            JSON.stringify(response.data, null, 2)
+          );
+          
+          console.log(`✅ Found and saved Swagger/OpenAPI spec from specified URL: ${options.swaggerUrl}`);
+          return response.data;
+        }
+      }
+    } catch (error) {
+      console.log(`Could not fetch Swagger from specified URL ${options.swaggerUrl}: ${error.message}`);
+      // Continue to try other methods
+    }
+  }
+  
   // First, try the URL directly if it looks like a Swagger file
   if (baseUrl.endsWith('.json') || baseUrl.endsWith('.yaml') || baseUrl.endsWith('.yml')) {
     try {

@@ -60,7 +60,8 @@ program
             authToken: api.auth || options.auth,
             timeout: parseInt(api.timeout || options.timeout),
             output: options.output,
-            force: options.force
+            force: options.force,
+            swaggerUrl: api.swaggerUrl // Pass the swaggerUrl if provided in config
           });
         }
       } else {

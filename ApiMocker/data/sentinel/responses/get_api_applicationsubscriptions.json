@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "name": "Email Notifications",
+    "description": "Email notification service for alerts",
+    "isActive": true,
+    "updatedAt": "2025-05-24T12:00:00Z",
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedBy": "system",
+    "createdBy": "system",
+    "userApplicationSubscriptions": []
+  },
+  {
+    "id": 2,
+    "name": "SMS Notifications",
+    "description": "SMS notification service for alerts",
+    "isActive": true,
+    "updatedAt": "2025-05-24T12:00:00Z",
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedBy": "system",
+    "createdBy": "system",
+    "userApplicationSubscriptions": []
+  },
+  {
+    "id": 3,
+    "name": "Push Notifications",
+    "description": "Mobile push notification service for alerts",
+    "isActive": true,
+    "updatedAt": "2025-05-24T12:00:00Z",
+    "createdAt": "2025-05-01T10:00:00Z",
+    "updatedBy": "system",
+    "createdBy": "system",
+    "userApplicationSubscriptions": []
+  }
+]

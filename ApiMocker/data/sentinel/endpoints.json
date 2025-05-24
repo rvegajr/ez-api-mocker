@@ -1,0 +1,51 @@
+[
+  {
+    "path": "/api/ApplicationSubscriptions",
+    "method": "GET",
+    "operationId": "GetApplicationSubscriptions",
+    "tags": ["ApplicationSubscriptions"],
+    "parameters": [],
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ApplicationSubscription"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  {
+    "path": "/api/ApplicationSubscriptions",
+    "method": "POST",
+    "operationId": "CreateApplicationSubscription",
+    "tags": ["ApplicationSubscriptions"],
+    "requestBody": {
+      "content": {
+        "application/json": {
+          "schema": {
+            "$ref": "#/components/schemas/ApplicationSubscription"
+          }
+        }
+      }
+    },
+    "responses": {
+      "200": {
+        "description": "Success",
+        "content": {
+          "application/json": {
+            "schema": {
+              "$ref": "#/components/schemas/ApplicationSubscription"
+            }
+          }
+        }
+      }
+    }
+  }
+]
