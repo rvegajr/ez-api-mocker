@@ -107,6 +107,10 @@ dist
 # vitepress build output
 **/.vitepress/dist
 
+# Sensitive configuration files
+ApiMocker/sentinel-config.json
+ApiMocker/data/sentinel/
+
 # vitepress cache directory
 **/.vitepress/cache
 
@@ -134,3 +138,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+_*
+**/_*   

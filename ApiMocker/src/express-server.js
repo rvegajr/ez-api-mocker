@@ -19,6 +19,17 @@ function joinPaths(...parts) {
       return part.replace(/^\/+|\/+$/g, '');
     });
   
+  // Special case: if there are no normalized parts, return root path
+  if (normalizedParts.length === 0) {
+    return '/';
+  }
+  
+  // Special case: if the first part is an empty string (representing root path)
+  // and there are other parts, don't add an extra leading slash
+  if (parts[0] === '/' && normalizedParts.length > 0) {
+    return '/' + normalizedParts.join('/');
+  }
+  
   // Join parts with a single slash
   return '/' + normalizedParts.join('/');
 }
@@ -153,6 +164,23 @@ function loadApiConfigurations(dataDir) {
  * @param {string} customBasePath - Optional custom base path to override the API's base path
  */
 function registerApiRoutes(app, configs, responsesDir, customBasePath) {
+  // Add custom route handler for $metadata endpoint
+  if (responsesDir) {
+    const metadataPath = path.join(responsesDir, 'get_odata_metadata.json');
+    if (fs.existsSync(metadataPath)) {
+      console.log('Registering custom route handler for /odata/$metadata');
+      app.get('/odata/$metadata', (req, res) => {
+        try {
+          const metadataContent = fs.readFileSync(metadataPath, 'utf8');
+          const metadata = JSON.parse(metadataContent);
+          res.json(metadata);
+        } catch (error) {
+          console.error(`Error serving $metadata: ${error.message}`);
+          res.status(500).json({ error: 'Failed to serve $metadata' });
+        }
+      });
+    }
+  }
   // Handle both single API and array of APIs
   const configArray = Array.isArray(configs) ? configs : [configs];
   
@@ -184,8 +212,15 @@ function registerApiRoutes(app, configs, responsesDir, customBasePath) {
         const basePath = customBasePath || config.basePath || `/${config.name}`;
         console.log(`Using base path: ${basePath} for route: ${normalizedPath}`);
         
-        // Properly join the base path and normalized path
-        const fullPath = joinPaths(basePath, normalizedPath);
+        // Handle special case for root base path
+        let fullPath;
+        if (basePath === '/' && normalizedPath.startsWith('/')) {
+          // Avoid double slash by using the normalized path directly
+          fullPath = normalizedPath;
+        } else {
+          // Properly join the base path and normalized path
+          fullPath = joinPaths(basePath, normalizedPath);
+        }
         
         // Log the route being registered
         console.log(`Registering route: ${expressMethod.toUpperCase()} ${fullPath}`);
@@ -309,6 +344,14 @@ function generateFallbackResponse(method, pathPattern, params) {
  * @returns {string|null} Path to response file or null if not found
  */
 function findResponseFile(responsesDir, pathPattern, method, params) {
+  // Special case for $metadata endpoint
+  if (pathPattern === '/odata/$metadata' || pathPattern === 'odata/$metadata') {
+    const metadataFile = path.join(responsesDir, 'get_odata_metadata.json');
+    if (fs.existsSync(metadataFile)) {
+      console.log(`Found special response file for $metadata: ${metadataFile}`);
+      return metadataFile;
+    }
+  }
   if (!responsesDir) {
     console.error('No responses directory provided');
     return null;
